@@ -1584,17 +1584,18 @@ qy_=q_val*sin(theta_val);
       *exp(iota_complex*(qx_*((dis_x - Wnr_center_x)) + qy_*((dis_y  - Wnr_center_y))));
 
 
-	if( q_ind==0 && theta_ind==0 && 
+	/*if( q_ind==0 && theta_ind==0 && 
            ( ((r1_==int((L1_eff/2)+1)) && (r2_==int(L2_eff/2)))
 	     || ((r1_==int((L1_eff/2))) && (r2_==int((L2_eff/2)+1) )) ||
 	     ((r1_==int((L1_eff/2)-1)) && (r2_==int((L2_eff/2)+1) ))
  	   )
 	){
 	MrFILE<<r1_ind<<"  "<<r2_ind<<"  "<<dis_x/Parameters_.a_moire<<"  "<<dis_y/Parameters_.a_moire<<"  "<<val_temp1_.real()<<"   "<<val_temp1_.imag()<<endl; 
-	} 
+	}
+	*/ 
 		}
 
-	else{
+	/*else{
 	if( q_ind==0 && theta_ind==0 && 
 	( ((r1_==int((L1_eff/2)+1)) && (r2_==int(L2_eff/2))) 
             || ((r1_==int((L1_eff/2))) && (r2_==int((L2_eff/2)+1) )) ||
@@ -1603,18 +1604,21 @@ qy_=q_val*sin(theta_val);
 	){
         MrFILE<<r1_ind<<"  "<<r2_ind<<"  "<<dis_x/Parameters_.a_moire<<"  "<<dis_y/Parameters_.a_moire<<"  "<<0.0<<"   "<<0.0<<endl;
         }
-	 }
+	 }*/
 
 
 		}
-	if(q_ind==0 && theta_ind==0 && 
+/*	if(q_ind==0 && theta_ind==0 && 
 	( ((r1_==int((L1_eff/2)+1)) && (r2_==int(L2_eff/2)))
             || ((r1_==int((L1_eff/2))) && (r2_==int((L2_eff/2)+1) )) ||
              ((r1_==int((L1_eff/2)-1)) && (r2_==int((L2_eff/2)+1) ))
            )
 	 ){
 	MrFILE<<endl;
-	}
+	}*/
+
+
+
             }
 
 //        Mq_Sph_norm += sqrt((qx_*qx_) + (qy_*qy_))*d_q*d_theta*abs(Mq_SphC[q_ind][theta_ind]);
@@ -1748,9 +1752,9 @@ val_temp=(1.0/(4.0*PI*PI))*(d_q*d_theta)*(V_*(conj(MqR_SphC[q_ind][theta_ind][ce
    			   //*cos(-1.0*(qx_*(dis_x*0.5) +  qy_*(dis_y*0.5)));
                             //*exp(-1.0*iota_complex*( qx_*(dis_x*0.5) +  qy_*(dis_y*0.5) ));
 
-	AqSphCFILE<<q_val<<"  "<<theta_val<<"  "<<val_temp.real()<<"   "<<val_temp.imag()<<endl; 
+	//AqSphCFILE<<q_val<<"  "<<theta_val<<"  "<<val_temp.real()<<"   "<<val_temp.imag()<<endl; 
                 }
-		AqSphCFILE<<endl;
+		//AqSphCFILE<<endl;
             }
         }
     }
